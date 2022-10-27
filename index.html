@@ -8,16 +8,18 @@
     <title>Kauppalista</title>
 </head>
 <body>
+    <div class="container">
     <h1>Kauppalista</h1> 
-      <form id="haku"> 
-        <input type="text" placeholder="Lisää tavaroita"></form>
-<ul>
-    <li>Maitoa</li>
-    <li>Leipää</li>
-    <li>Oivariinia</li>
-    <li>Kinkkua</li>
-    <li>Tomaattia</li>
-</ul> 
-<script>src="js.js"</script>    
+      <form id="hae"> 
+        <input type="text" placeholder="Lisää tavaroita">
+        <button type="submit" id="Lisää">Lisää</button>
+    </form>
+<ul id ="Lista">
+    <li id = "1"><input type="checkbox"><label>Maitoa</label></li>
+    <li id = "2"><input type="checkbox"><label>Leipää</label></li>
+    <li id = "3"><input type="checkbox"><label>Juustoa</label></li>
+</ul>    
+</div>
+<script src="js.js"></script>
 </body>
 </html>

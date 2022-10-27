@@ -6,28 +6,76 @@ body{
     background-color: aqua;
 }
 
+form{
+  position: relative;
+  padding: 20px;
+}
+
+form input{
+  width: 75%;
+  height: 45px;
+  padding: 12px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  font-family: 'Poppins',sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
+}
+ form input:focus{
+  outline: none;
+  border-color: #0d75ec;
+}
+#Lisää {
+  width: 100px;
+  height: 40px;
+  color: black;
+  background-color: #0d75ec;
+}
     ul li {
         cursor: pointer;
         position: relative;
         padding: 20px 10px;
         font-size: 20px;
+        list-style: none;
+        border-width: 5px;
+        border-radius: 20px;
+        background-color: #ecdada;
+        max-width: 400px;
     }
   
   ul li:hover {
-    background: rgb(8, 3, 3);
+    background: rgb(203, 152, 152);
     border-width: 5px;
     border-radius: 20px;
   }
    
-  ul li:before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+  ul li.checked{
+    text-decoration: line-through;
+    color: aqua;
+  }
+
+  button {
+  width: 25px;
+  height: 25px;
+  color: black;
+  background-color: #454c54;
+  
+  }
+
+  input[type=checkbox]:checked + label{
+    color: rgba(192, 192, 192, 0.8);
+    text-decoration: line-through;
+  }
+
+  input[type=checkbox]{
+  width: 20px;  
+  height: 20px;
+  
+  }
+  
+  label {
+  color:#103054;
+  padding: 20px;  
   }
