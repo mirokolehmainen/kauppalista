@@ -12,14 +12,13 @@ form{
 }
 
 form input{
-  width: 75%;
+  width: 45%;
   height: 45px;
   padding: 12px;
   color: #111111;
-  font-weight: 500;
   position: relative;
   border-radius: 5px;
-  font-family: 'Poppins',sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   font-size: 15px;
   border: 2px solid #d1d3d4;
 }
@@ -43,6 +42,7 @@ form input{
         border-radius: 20px;
         background-color: #ecdada;
         max-width: 400px;
+      
     }
   
   ul li:hover {
@@ -51,10 +51,7 @@ form input{
     border-radius: 20px;
   }
    
-  ul li.checked{
-    text-decoration: line-through;
-    color: aqua;
-  }
+  
 
   button {
   width: 25px;
@@ -64,18 +61,24 @@ form input{
   
   }
 
-  input[type=checkbox]:checked + label{
-    color: rgba(192, 192, 192, 0.8);
-    text-decoration: line-through;
-  }
-
+  
   input[type=checkbox]{
   width: 20px;  
   height: 20px;
-  
   }
   
-  label {
-  color:#103054;
-  padding: 20px;  
+
+  input::placeholder{
+    color: #734a4a;
+
   }
+
+
+  
+
+  
+
+ 
+
+  
+  
