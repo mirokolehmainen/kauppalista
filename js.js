@@ -46,9 +46,9 @@ document.getElementById('Lisää').onclick = function Tarkista(){
     
     // Lisätään tavara Listaan
     Lista.appendChild(tavara) 
-    if (tavara === true) {
-      Lista.classList.add('checked');
-    }
+    //if (tavara === true) {
+      //tavara.classList.add('checked');
+   // }
     
 
    //Lisätään viiva klikkauksella
@@ -90,10 +90,12 @@ function Tallenna() {
 }
 //Saadaan arvot Local Storagesta funktio
 function HaeArvot() {
-  var storedValues = window.localStorage.myitems;
- 
+  var Talennettu = window.localStorage.myitems;
+  if(!Talennettu) {
+    Lista.innerHTML = ''
    
-    Lista.innerHTML = storedValues;
   }
+  else { Lista.innerHTML = Talennettu;
+  }}
   HaeArvot();
 
