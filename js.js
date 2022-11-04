@@ -39,20 +39,23 @@ document.getElementById('Lisää').onclick = function Tarkista(){
     // Lisätään tavara Listaan
     Lista.appendChild(tavara) 
     
-   
-   //Lisätään viiva klikkauksella
-    checkbox.onclick = function Viiva()
-    {
-	  document.getElementById('tavara');
-	  if (this.checked)
-    {
-    	tavara.style.textDecoration = 'line-through';
-      tavara.style.textDecorationColor ='white';
-    }else{
-    
-    	tavara.style.textDecoration = 'none';
-    }
-  }
+
+//Lisätään viiva klikkauksella
+checkbox.onclick = function Viiva()
+{
+document.getElementById('tavara');
+if (this.checked)
+{
+  tavara.style.textDecoration = 'line-through';
+  tavara.style.textDecorationColor ='white';
+}else{
+
+  tavara.style.textDecoration = 'none';
+}
+}
+
+
+
 
     //Poistonappi
     let nappi = document.createElement("button")
@@ -79,18 +82,4 @@ if (localStorage["Tavarat"]) {
 }
   
   
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-
 

@@ -74,7 +74,10 @@ form input{
   }
 
 
-  
+  .tavara:checked{
+    text-decoration-line: line-through;
+    color: blueS;
+  }
 
   
 
