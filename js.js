@@ -81,16 +81,16 @@ document.getElementById('Lisää').onclick = function Tarkista(){
   function Poista () {  
   var tavara = this.event.currentTarget.parentNode;
   Lista.removeChild(tavara);
-  localStorage.removeItem('myitems');
+  localStorage.removeItem('Tavarat');
 }
 
 //Tallennus funktio
 function Tallenna() {
-  window.localStorage.myitems = Lista.innerHTML;
+  window.localStorage.Tavarat = Lista.innerHTML;
 }
 //Saadaan arvot Local Storagesta funktio
 function HaeArvot() {
-  var Talennettu = window.localStorage.myitems;
+  var Talennettu = window.localStorage.Tavarat;
   if(!Talennettu) {
     Lista.innerHTML = ''
    
