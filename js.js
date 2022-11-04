@@ -11,7 +11,7 @@ document.querySelector("form").addEventListener("submit", e => {
   //tallennetaan ja tyhjennetään kenttä
     Tallenna();
     todoInput.value = "";
-  },false)
+  })
   
 
     // tyhjentää arvon
@@ -47,6 +47,7 @@ document.getElementById('Lisää').onclick = function Tarkista(){
     // Lisätään tavara Listaan
     Lista.appendChild(tavara) 
    
+    
    //Lisätään viiva klikkauksella
     checkbox.onclick = function Viiva()
     {
