@@ -46,11 +46,7 @@ document.getElementById('Lisää').onclick = function Tarkista(){
     
     // Lisätään tavara Listaan
     Lista.appendChild(tavara) 
-    //if (tavara === true) {
-      //tavara.classList.add('checked');
-   // }
-    
-
+   
    //Lisätään viiva klikkauksella
     checkbox.onclick = function Viiva()
     {
@@ -93,7 +89,6 @@ function HaeArvot() {
   var Talennettu = window.localStorage.Tavarat;
   if(!Talennettu) {
     Lista.innerHTML = ''
-   
   }
   else { Lista.innerHTML = Talennettu;
   }}
