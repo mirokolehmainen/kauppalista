@@ -1,10 +1,22 @@
-const Lista = document.getElementById("Lista")    // tarvittava elementti useasti
+const Lista = document.getElementById("Lista")    // tarvittavat elementit useasti
+const todoInput = document.querySelector('.todo-input');
+
+//haetaan Local Storagesta
+HaeArvot();
 
 //estää sivun uudelleen lataamisen
 document.querySelector("form").addEventListener("submit", e => {
   e.preventDefault();
+ 
+  //tallennetaan ja tyhjennetään kenttä
+    Tallenna();
+    todoInput.value = "";
+  },false)
   
-})
+
+    // tyhjentää arvon
+    todoInput.value = '';
+    
 //auttaa luomaan id:n
 var määrä = 0;
 
@@ -22,10 +34,6 @@ document.getElementById('Lisää').onclick = function Tarkista(){
     tavara.id = (++määrä);
     const Teksti = document.querySelector('form input').value
     
-    //tallentaa uudet tiedot
-    localStorage["Tavarat"] = Lista.innerHTML
-    localStorage.getItem('Tavarat') 
- 
 
     // checkbox
     const checkbox = document.createElement("input")
@@ -38,8 +46,11 @@ document.getElementById('Lisää').onclick = function Tarkista(){
     
     // Lisätään tavara Listaan
     Lista.appendChild(tavara) 
+    if (tavara === true) {
+      Lista.classList.add('checked');
+    }
     
-   
+
    //Lisätään viiva klikkauksella
     checkbox.onclick = function Viiva()
     {
@@ -70,13 +81,19 @@ document.getElementById('Lisää').onclick = function Tarkista(){
   function Poista () {  
   var tavara = this.event.currentTarget.parentNode;
   Lista.removeChild(tavara);
-  localStorage["Tavarat"] = Lista.innerHTML // Päivitetään Local Storage
+  localStorage.removeItem('myitems');
 }
 
-//Tallennusta jossa Listasta tehdään Tavarat
-if (localStorage["Tavarat"]) {
-  Lista.innerHTML = localStorage["Tavarat"];
+//Tallennus funktio
+function Tallenna() {
+  window.localStorage.myitems = Lista.innerHTML;
 }
-  
-  
+//Saadaan arvot Local Storagesta funktio
+function HaeArvot() {
+  var storedValues = window.localStorage.myitems;
+ 
+   
+    Lista.innerHTML = storedValues;
+  }
+  HaeArvot();
 
